@@ -12,7 +12,7 @@ export const CourseCard: React.FC<CourseCardProps> = ({ course, onSelectCourse, 
   return (
     <div
       onClick={() => onSelectCourse(course)}
-      className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group cursor-pointer"
+      className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover-card-lift transition-all duration-300 flex flex-col group cursor-pointer animate-fade-in-up"
     >
       {/* Thumbnail & Badges */}
       <div className="relative h-48 w-full overflow-hidden bg-slate-900">

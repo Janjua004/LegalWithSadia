@@ -34,7 +34,9 @@ export const FeatureBadges: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-slate-900/80 p-6 rounded-2xl border border-slate-800 shadow-sm hover:shadow-lg hover:border-gold-500/40 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group cursor-pointer"
+                className={`bg-slate-900/80 p-6 rounded-2xl border border-slate-800 shadow-sm hover:shadow-lg hover:border-gold-500/40 hover-card-lift transition-all duration-300 flex flex-col items-center text-center group cursor-pointer animate-fade-in-up ${
+                  idx === 0 ? 'animate-delay-1' : idx === 1 ? 'animate-delay-2' : idx === 2 ? 'animate-delay-3' : 'animate-delay-4'
+                }`}
               >
                 <div className="w-14 h-14 rounded-full bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-4 group-hover:scale-110 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all duration-300 shadow-sm">
                   <Icon className="w-6 h-6" />

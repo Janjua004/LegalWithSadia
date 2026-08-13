@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           {/* Left Column: Text Content, CTAs & Stats */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-left">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-left animate-fade-in-up">
             
             <div className="space-y-3 sm:space-y-5">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight sm:leading-[1.18] font-serif max-w-xl">
@@ -47,38 +47,38 @@ export const Hero: React.FC<HeroProps> = ({ setActiveTab }) => {
                 <span className="text-[#d9a24a]">For Future Leaders</span>
               </h1>
 
-              <p className="text-slate-300 text-sm sm:text-base lg:text-lg max-w-xl font-normal leading-relaxed drop-shadow-sm">
+              <p className="text-slate-300 text-sm sm:text-base lg:text-lg max-w-xl font-normal leading-relaxed drop-shadow-sm animate-fade-in-up animate-delay-1">
                 Access high-quality lectures, comprehensive notes, and internship training to become confident legal professionals.
               </p>
             </div>
 
-            {/* Action Buttons - Restored to side-by-side flex layout */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
+            {/* Action Buttons - Restored to side-by-side flex layout with smooth micro-interactions */}
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1 animate-fade-in-up animate-delay-2">
               <button
                 onClick={() => setActiveTab('courses')}
-                className="px-6 sm:px-8 py-3.5 rounded-lg font-bold text-navy-950 bg-[#d9a24a] hover:bg-[#c8923a] transition-all text-sm sm:text-base shadow-md cursor-pointer hover:scale-[1.02] active:scale-95"
+                className="px-6 sm:px-8 py-3.5 rounded-lg font-bold text-navy-950 bg-[#d9a24a] hover:bg-[#c8923a] transition-all duration-200 text-sm sm:text-base shadow-md cursor-pointer hover:scale-[1.03] active:scale-95 hover:shadow-gold-glow"
               >
                 Explore Courses
               </button>
 
               <button
                 onClick={() => setActiveTab('notes')}
-                className="px-6 sm:px-8 py-3.5 rounded-lg font-semibold text-slate-100 bg-slate-950/60 sm:bg-transparent border border-[#d9a24a]/60 hover:border-[#d9a24a] hover:text-[#d9a24a] backdrop-blur-sm sm:backdrop-blur-none transition-all text-sm sm:text-base cursor-pointer"
+                className="px-6 sm:px-8 py-3.5 rounded-lg font-semibold text-slate-100 bg-slate-950/60 sm:bg-transparent border border-[#d9a24a]/60 hover:border-[#d9a24a] hover:text-[#d9a24a] backdrop-blur-sm sm:backdrop-blur-none transition-all duration-200 text-sm sm:text-base cursor-pointer hover:scale-[1.03] active:scale-95"
               >
                 Browse Notes
               </button>
             </div>
 
             {/* Stats Row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 pt-6 sm:pt-10 border-t border-slate-800/60 max-w-2xl w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 pt-6 sm:pt-10 border-t border-slate-800/60 max-w-2xl w-full animate-fade-in-up animate-delay-3">
               {stats.map((stat, idx) => {
                 const Icon = stat.icon;
                 return (
                   <div
                     key={idx}
-                    className="flex items-center gap-2.5 p-2 sm:p-0 rounded-xl bg-slate-950/40 sm:bg-transparent border border-slate-800/40 sm:border-none backdrop-blur-sm sm:backdrop-blur-none"
+                    className="flex items-center gap-2.5 p-2 sm:p-0 rounded-xl bg-slate-950/40 sm:bg-transparent border border-slate-800/40 sm:border-none backdrop-blur-sm sm:backdrop-blur-none hover-scale-sm transition-transform"
                   >
-                    <div className="text-[#d9a24a] shrink-0 p-1 sm:p-0 rounded-lg bg-[#d9a24a]/10 sm:bg-transparent flex items-center justify-center">
+                    <div className="text-[#d9a24a] shrink-0 p-1.5 sm:p-1 rounded-lg bg-[#d9a24a]/10 sm:bg-transparent flex items-center justify-center">
                       <Icon className="w-4 h-4 sm:w-5 sm:h-5 stroke-[1.75]" />
                     </div>
                     <div className="text-left min-w-0">
