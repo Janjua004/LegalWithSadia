@@ -70,11 +70,11 @@ export const AboutView: React.FC = () => {
                   }}
                 />
               </div>
-              <div className="space-y-1.5 text-center sm:text-left">
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-gold-100 text-gold-800 uppercase tracking-wider">
+              <div className="space-y-2 text-center sm:text-left">
+                <span className="inline-block px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-950 border border-amber-300/80 uppercase tracking-wider shadow-xs">
                   Lead Instructor & Founder
                 </span>
-                <h3 className="text-lg font-bold text-slate-900 font-serif">Advocate Sadia Hammad</h3>
+                <h3 className="text-xl font-bold text-slate-900 font-serif">Advocate Sadia Hammad</h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   High Court Advocate with years of courtroom & drafting experience dedicated to mentoring young legal minds across Pakistan.
                 </p>
