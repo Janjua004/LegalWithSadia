@@ -57,9 +57,10 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab }) => {
                 />
                 <button
                   type="submit"
-                  className="px-6 py-2.5 rounded-xl font-bold bg-gold-gradient-bg text-navy-950 shadow-gold-glow hover:brightness-110 transition-all text-xs whitespace-nowrap cursor-pointer"
+                  className="px-6 py-2.5 rounded-xl font-bold bg-[#d9a24a] hover:bg-[#c8923a] text-[#070a10] shadow-md transition-all text-xs font-sans uppercase tracking-wider whitespace-nowrap cursor-pointer flex items-center justify-center gap-1.5"
                 >
-                  Subscribe
+                  <Send className="w-3.5 h-3.5 text-[#070a10]" />
+                  <span>Subscribe</span>
                 </button>
               </form>
             )}
