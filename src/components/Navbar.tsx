@@ -43,20 +43,24 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Brand Logo (Vertical Emblem containing Logo Mark & Name) */}
+          {/* Brand Logo & Name */}
           <div
             onClick={() => setActiveTab('home')}
-            className="flex items-center cursor-pointer group shrink-0 mr-6 sm:mr-8 lg:mr-12"
+            className="flex items-center gap-3 cursor-pointer group shrink-0 mr-8 lg:mr-12"
           >
-            <img
-              src="/images/legal_logo.png"
-              alt="Legal With Sadia Logo"
-              className="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
-              onError={(e) => {
-                // Fallback to text logo if image unavailable
-                (e.target as HTMLImageElement).style.display = 'none';
-              }}
-            />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 p-0.5 shadow-gold-glow group-hover:scale-105 transition-transform duration-300">
+              <div className="w-full h-full bg-navy-950 rounded-[10px] flex items-center justify-center">
+                <Scale className="w-5.5 h-5.5 text-gold-400 group-hover:rotate-12 transition-transform duration-300" />
+              </div>
+            </div>
+            <div className="shrink-0">
+              <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-white whitespace-nowrap block group-hover:text-gold-400 transition-colors">
+                LEGAL WITH SADIA
+              </span>
+              <p className="text-[9px] font-semibold tracking-widest text-gold-400/90 uppercase whitespace-nowrap">
+                Advocate & Legal Mentor
+              </p>
+            </div>
           </div>
 
           {/* Desktop Navigation Links */}
