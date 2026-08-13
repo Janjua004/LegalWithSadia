@@ -43,38 +43,31 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Brand Logo & Name */}
+          {/* Brand Logo (Vertical Emblem containing Logo Mark & Name) */}
           <div
             onClick={() => setActiveTab('home')}
-            className="flex items-center gap-3 cursor-pointer group shrink-0"
+            className="flex items-center cursor-pointer group shrink-0 mr-6 sm:mr-8 lg:mr-12"
           >
             <img
               src="/images/legal_logo.png"
               alt="Legal With Sadia Logo"
-              className="w-10 h-10 object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
               onError={(e) => {
+                // Fallback to text logo if image unavailable
                 (e.target as HTMLImageElement).style.display = 'none';
               }}
             />
-            <div className="shrink-0">
-              <span className="font-serif text-base sm:text-lg xl:text-xl font-bold tracking-tight text-white whitespace-nowrap block group-hover:text-gold-400 transition-colors">
-                LEGAL WITH SADIA
-              </span>
-              <p className="text-[9px] sm:text-[10px] font-semibold tracking-widest text-gold-400/90 uppercase whitespace-nowrap">
-                Advocate & Legal Mentor
-              </p>
-            </div>
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-1.5 shrink-0">
+          <nav className="hidden lg:flex items-center space-x-1.5 xl:space-x-2 shrink-0">
             {navItems.map((item) => (
               <button
                 key={item.tab}
                 onClick={() => setActiveTab(item.tab)}
-                className={`px-3 py-2 rounded-lg text-xs xl:text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+                className={`px-3.5 py-2 rounded-xl text-xs xl:text-sm font-medium whitespace-nowrap transition-all duration-200 ${
                   activeTab === item.tab
-                    ? 'text-gold-400 bg-gold-500/10 font-bold'
+                    ? 'text-gold-400 bg-gold-500/10 font-bold border border-gold-500/20'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                 }`}
               >
